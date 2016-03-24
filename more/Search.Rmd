@@ -1,0 +1,8 @@
+library(XML)
+library(knitr)
+setwd("/Users/scottkarr/IS607Spring2016/hw8/")
+
+url <-  "/Users/scottkarr/IS607Spring2016/hw8/more/books.html"
+tbl <- readHTMLTable(url)
+df <- data.frame(tbl)
+kable(df, align='l')
